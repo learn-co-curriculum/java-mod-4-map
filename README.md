@@ -7,10 +7,10 @@
 
 ## What is Mapping?
 
-- `<R> Stream<R>	map(Function<? super T,? extends R> mapper)`
+`<R> Stream<R>	map(Function<? super T,? extends R> mapper)`
 
 Mapping is one of the most common intermediate stream operations. 
-The `map` function return a new stream consisting of the results of
+The `map` function returns a new stream consisting of the results of
 applying the mapper function to the elements of a stream.
 
 The mapper function passed as an argument to the `map` method can
@@ -151,7 +151,7 @@ devon
 pat
 ```
 
-If we want to get the names in uppercase, we can either use a lambda
+If we want to get the names in uppercase, we can use a lambda
 expression to get each name and then uppercase it:
 
 ```java
@@ -161,7 +161,7 @@ employees.stream()
         .forEach(System.out::println);
 ```
 
-This produces:
+The program prints:
 
 ```text
 FRED
@@ -169,8 +169,9 @@ DEVON
 PAT
 ```
 
-We can also chain a sequence of calls to the `map` method,
-passing a single method reference to each.  While this
+We can produce the same output by chaining a sequence of calls
+to the `map` method,
+passing a single method reference to each. While this
 makes the code more readable, it is less efficient since
 each call to `map` creates a new stream:
 
